@@ -1,0 +1,113 @@
+<html>
+    <title>LCD Control Page</title>
+    <header>
+	 <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <!-- CSS for our app -->         
+    <link rel="stylesheet" href="/static/lcd.css"/>
+
+    <!-- JS for our app --> 
+   	<script type="text/javascript" src="/static/lcd.js" charset="utf-8"></script>
+  
+    </header>
+    <body style="padding-top: 75px; background-color: darkgray">
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">LCD Control Page</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about" onclick="ShowAbout()">About</a></li>                
+            </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+        </nav>
+
+        <div class="container">
+
+            <div class="text-center centerstuff containermods" >
+                <button id="TurnOn" class="btn btn-success commandbuttonLCD" onclick="SendOnCommand()">Turn LCD ON</button>
+                <button id="TurnOff" class="btn btn-success commandbuttonLCD" onclick="SendOffCommand()">Turn LCD OFF</button>      
+            </div>
+        </div> <!-- /container -->
+
+        <div class="container containermods">
+            <div class="text-center centerstuff">
+                <button id="SendClearLCD" class="btn btn-success commandbuttonLCDLarge" onclick="SendClearCommand()">Clear LCD</button>                                    
+            </div>    
+        </div> <!-- /container -->        
+
+        <div class="container containermods">
+
+            <div class="text-center centerstuff">
+                <input type="text" id="TextLine01" maxlength="20" class="lcdline"/>
+            </div>
+            <div class="text-center centerstuff">
+                <input type="text" id="TextLine02" maxlength="20" class="lcdline"/>
+            </div>
+            <div class="text-center centerstuff">
+                <input type="text" id="TextLine03" maxlength="20" class="lcdline"/>
+            </div>
+            <div class="text-center centerstuff">
+                <input type="text" id="TextLine04" maxlength="20" class="lcdline"/>
+            </div>    
+            <div class="text-center centerstuff" hidden>
+                <input type="text" id="TextLine05" maxlength="20" class="lcdline"/>
+            </div>
+            <div class="text-center centerstuff" hidden>
+                <input type="text" id="TextLine06" maxlength="20" class="lcdline"/>
+            </div>
+            <div class="text-center centerstuff" hidden> 
+                <input type="text" id="TextLine07" maxlength="20" class="lcdline"/>
+            </div>
+            <div class="text-center centerstuff" hidden>
+                <input type="text" id="TextLine08" maxlength="20" class="lcdline"/>
+            </div>    
+            <div class="text-center centerstuff" hidden>
+                <input type="text" id="TextLine09" maxlength="20" class="lcdline"/>
+            </div>
+            <div class="text-center centerstuff" hidden>
+                <input type="text" id="TextLine10" maxlength="20" class="lcdline"/>
+            </div>    
+        </div>
+
+        <div class="container containermods">
+            <div class="text-center centerstuff">
+                <button id="ClearUI" class="btn btn-info commandbuttonLCD" onclick="ClearUI()">Clear Text</button>
+                <button id="ShowMoreLines" class="btn btn-info commandbuttonLCD disabled" onclick="ShowMoreLines()" >Show More Lines</button>
+            </div>    
+        </div> <!-- /container -->
+
+        <div class="container containermods">
+            <div class="text-center centerstuff">
+                <button id="SendMessage" class="btn btn-success commandbuttonLCDLarge"  onclick="SendMsgDisplay()">Send Message</button>                    
+            </div>    
+        </div> <!-- /container -->        
+
+        
+            
+        <div class="container containermods">
+            <div class="text-center centerstuff" id="UserMessages">                                
+            </div>    
+        </div> <!-- /container -->
+
+      <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>

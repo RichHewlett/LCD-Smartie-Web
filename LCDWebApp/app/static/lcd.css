@@ -1,0 +1,17 @@
+  .lcdline{
+            background-color: darkblue;
+            color: white;
+            font-size: 30;             
+    }
+    .commandbuttonLCD{
+            width: 140px;
+    }
+    .commandbuttonLCDLarge{
+            width: 285px;
+    }
+    .centerstuff{
+        margin: 0 auto;
+    }
+    .containermods{
+        padding: 10px;
+    }
